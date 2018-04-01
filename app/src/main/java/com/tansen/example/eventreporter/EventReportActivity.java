@@ -94,19 +94,9 @@ public class EventReportActivity extends AppCompatActivity {
         mImageViewSend = (ImageView) findViewById(R.id.img_event_report);
         database = FirebaseDatabase.getInstance().getReference();
         img_event_picture = (ImageView) findViewById(R.id.img_event_picture_capture);
+
         storage = FirebaseStorage.getInstance();
         storageRef = storage.getReference();
-
-        mImageViewSend.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String key = uploadEvent();
-                if (mImgUri != null) {
-                    uploadImage(key);
-                    mImgUri = null;
-                }
-            }
-        });
 
         mImageViewSend.setOnClickListener(new View.OnClickListener() {
             @Override

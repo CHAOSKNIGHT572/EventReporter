@@ -5,11 +5,39 @@ package com.tansen.example.eventreporter;
  */
 
 public class Event {
+    public int getCommentNumber() {
+        return CommentNumber;
+    }
+
+    public void setCommentNumber(int commentNumber) {
+        CommentNumber = commentNumber;
+    }
+
     /**
+
      * All data for a event.
      */
     private String title;
     private String address;
+    private int CommentNumber;
+    private double latitude;
+    private double longitude;
+
+    public double getLatitude() {
+        return latitude;
+    }
+
+    public void setLatitude(double latitude) {
+        this.latitude = latitude;
+    }
+
+    public double getLongitude() {
+        return longitude;
+    }
+
+    public void setLongitude(double longitude) {
+        this.longitude = longitude;
+    }
 
     public int getLike() {
         return like;
